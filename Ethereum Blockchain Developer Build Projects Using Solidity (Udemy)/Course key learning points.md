@@ -47,9 +47,9 @@ There are various types of blockchains:
 - __Private blockchains__
 
 ### Genesis.js
-
-The higher gas the more complex the network is.
-
+- Config:
+- Difficulty: The higher gas the more complex the network is.
+Alloc
 ##Additional resouces
 - [Geth Wiki](https://github.com/ethereum/go-ethereum/wiki/geth)
 - [Geth command line options](https://github.com/ethereum/go-ethereum/wiki/Command-Line-Options)
