@@ -33,6 +33,22 @@ There are three interfaces for using geth:
   - __Command line options__ documents command line parameters as well as subcommands
 
 
+- In order to see all commands we can use command __admin__.
+- In order to create new account: __personal.newAccount();___. The new accounts are stored in ~AppData/Roaming/Ethereum/keystore in your user folder. So to summarize we have a blockchain running somwhere we connect to it and then run Javascript commands on this blockchain node. The blockchainnode will translate it either as a new transaction or read data from already downloaded blocks.
+
+### Types of blockchain
+
+There are various types of blockchains:
+-  public blockchains:
+   - __MAINNET__ (everybody can participate, everybody can mine and send transaction)
+   - __TESTNET__ (everybody can participate, mine but it's used for testing only)
+- __Consortium blockchains__ (limited authority in the network
+)
+- __Private blockchains__
+
+### Genesis.js
+
+The higher gas the more complex the network is.
 
 ##Additional resouces
 - [Geth Wiki](https://github.com/ethereum/go-ethereum/wiki/geth)
