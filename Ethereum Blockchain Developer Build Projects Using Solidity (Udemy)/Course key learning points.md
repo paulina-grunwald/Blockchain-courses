@@ -50,7 +50,7 @@ There are various types of blockchains:
 
 ### Genesis.js
 Genesis.js is a config file for Go Ethereum in order to create private network. It's the file that Go Etherum needs to create first block so called genesis block (thus the name of the Genesis.js).
-
+Content of the file:
 - Config:
 - Difficulty: The higher gas the more complex the network is.
 Alloc
