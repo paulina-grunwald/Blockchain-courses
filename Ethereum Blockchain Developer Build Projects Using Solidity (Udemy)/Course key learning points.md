@@ -34,7 +34,9 @@ There are three interfaces for using geth:
 
 
 - In order to see all commands we can use command __admin__.
-- In order to create new account: __personal.newAccount();___. The new accounts are stored in ~AppData/Roaming/Ethereum/keystore in your user folder. So to summarize we have a blockchain running somwhere we connect to it and then run Javascript commands on this blockchain node. The blockchainnode will translate it either as a new transaction or read data from already downloaded blocks.
+- In order to create new account: __personal.newAccount();___. The new accounts are stored in ~AppData/Roaming/Ethereum/keystore in your user folder. So to summarize we have a blockchain running somewhere we connect to it and then run Javascript commands on this blockchain node. The blockchain node will translate it either as a new transaction or read data from already downloaded blocks.
+- __eth.syncing__
+- all the comands can be found on Go Etherum github website.
 
 ### Types of blockchain
 
@@ -44,9 +46,11 @@ There are various types of blockchains:
    - __TESTNET__ (everybody can participate, mine but it's used for testing only)
 - __Consortium blockchains__ (limited authority in the network
 )
-- __Private blockchains__
+- __Private blockchains__ - you are the only one person who can use the blockchain.
 
 ### Genesis.js
+Genesis.js is a config file for Go Ethereum in order to create private network. It's the file that Go Etherum needs to create first block so called genesis block (thus the name of the Genesis.js).
+
 - Config:
 - Difficulty: The higher gas the more complex the network is.
 Alloc
