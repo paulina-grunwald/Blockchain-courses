@@ -93,15 +93,42 @@ if we do not add nodiscovery geth can start synronizing with network that has th
 4. Check if you have any accounts (they will be stored in mychaindata/keystore) on your geth instance using commands ```eth.accounts```. Using ```personal``` we can see
 
 5. Create new account
-```personal.newAccount();
+```
+personal.newAccount();
 ```
 6. To check account type eth.accounts. For mining set coinbase using command eth.coinbase. When you mine all the ether will be stored in the coinbase account.
 
 7. miner.setEtherbase(eth.accounts[0]);
 
+
+
+
+
 ### How smart contracts operate at their core
 
-Smart contracts will help to exchange things of value in a transparent and secure way.
+__Smart contracts__ will help to exchange things of value in a transparent and secure way.
+
+Features of smart contracts:
+1. Autonomy
+2. Trust (documents are encrypted leager)
+3. Back-ups (files are stored across all nodes)
+4. Safety
+5. Speed
+6. Savings
+
+__Multi-Signature Waller__ - an additional layer of security is added.
+
+### MetaMask and what you can do with it
+
+
+
+### Understanding Remix
+
+
+
+
+
+
 
 ## Additional resouces
 - [Geth Wiki](https://github.com/ethereum/go-ethereum/wiki/geth)
