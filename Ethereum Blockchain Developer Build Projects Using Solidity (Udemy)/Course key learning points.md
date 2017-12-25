@@ -19,7 +19,7 @@ web3.js javascript library
 ### Installing GETH Etherum
 GETH Ethereum can be download on [Go Etherum website](https://geth.ethereum.org/downloads/). You need to select correct version for your operting system.
 
-###Working with GETH
+### Working with GETH
 In order to start up geth open PowerShell(on windows) and type comamnd __geth__. The first time you start geth it will run in the __fast mode__ (it will download all the block and only about last 1024 transactions). By running geth you will join etherum netowrk and be able to do following:
 - mine real etherum,
 - transfer funds between addresses,
@@ -95,10 +95,15 @@ if we do not add nodiscovery geth can start synronizing with network that has th
 5. Create new account
 ```personal.newAccount();
 ```
-6. 
+6. To check account type eth.accounts. For mining set coinbase using command eth.coinbase. When you mine all the ether will be stored in the coinbase account.
 
+7. miner.setEtherbase(eth.accounts[0]);
 
-##Additional resouces
+### How smart contracts operate at their core
+
+Smart contracts will help to exchange things of value in a transparent and secure way.
+
+## Additional resouces
 - [Geth Wiki](https://github.com/ethereum/go-ethereum/wiki/geth)
 - [Geth command line options](https://github.com/ethereum/go-ethereum/wiki/Command-Line-Options)
 - [Solidity](https://solidity.readthedocs.io/en/latest/installing-solidity.html#versioning)
