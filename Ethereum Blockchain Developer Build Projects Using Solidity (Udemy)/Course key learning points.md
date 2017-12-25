@@ -72,9 +72,32 @@ Content of the file:
 - __gasLimit__  - necessary for deploying contracts, limits amount of logic you can run on a miner. The higher gas the more complex the network is. Now the limit is 6 mln.
 - __aloc__ - pre-allocates ether to certain accounts.
 
+<em>NOTE</em>: to open a PowerShell from the folder shift+right click mouse->open PowerShell
+
+#### __EXERCISE 1__: create private network:
+
+__1.__  Create new directory mychaindata where we will store out blocks in and initialize this new directory with genesis.json file. New genesis block is initialized in mychaindata.
+
+```ethereum
+geth init .\genesis.json --datadir mychaindata
+```
+__2.__ Start new, private blockchain with mychaindata directory.
+
+```etherum
+ geth --datadir .\mychaindata --nodiscover
+```
+if we do not add nodiscovery geth can start synronizing with network that has the same block id. We want to avoide it.
+
+3. Start second PowerShell window in the same folder and write command ```geth attach```
+
+4. Check if you have any accounts (they will be stored in mychaindata/keystore) on your geth instance using commands ```eth.accounts```. Using ```personal``` we can see
+
+5. Create new account
+```personal.newAccount();
+```
+6. 
 
 
-Alloc
 ##Additional resouces
 - [Geth Wiki](https://github.com/ethereum/go-ethereum/wiki/geth)
 - [Geth command line options](https://github.com/ethereum/go-ethereum/wiki/Command-Line-Options)
