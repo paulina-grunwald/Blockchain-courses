@@ -49,10 +49,31 @@ There are various types of blockchains:
 - __Private blockchains__ - you are the only one person who can use the blockchain.
 
 ### Genesis.js
-Genesis.js is a config file for Go Ethereum in order to create private network. It's the file that Go Etherum needs to create first block so called genesis block (thus the name of the Genesis.js).
+Genesis.js is a config file for Go Ethereum in order to create private network. It's the file that Go Etherum needs to create first block so called genesis block (thus the name of the Genesis.js). It is a JSON file wirh javascript object notation as a one object.
+
 Content of the file:
-- Config:
-- Difficulty: The higher gas the more complex the network is.
+
+```javascript
+  "config": {
+      "chainID": 15,
+      "homesteadBlock": 0,
+      "eip158Block": 0,
+      "eip158Block": 0,
+  },
+  "difficulty": "0x20000",
+  "gasLimit"  : "0x800000",
+  "alloc": {}
+}
+````
+- __config__- contains to a chain id. This chain id is set to 15 but it can not be set to 1 (AINNET), 2 and 3 (TESTNET).
+- __homesteadBlock__ - release name (last release was frontier).
+- __eip__ - Ethereum improvement protocol.
+- __difficulty__ -  The lower it is the easier is to mine.
+- __gasLimit__  - necessary for deploying contracts, limits amount of logic you can run on a miner. The higher gas the more complex the network is. Now the limit is 6 mln.
+- __aloc__ - pre-allocates ether to certain accounts.
+
+
+
 Alloc
 ##Additional resouces
 - [Geth Wiki](https://github.com/ethereum/go-ethereum/wiki/geth)
