@@ -124,11 +124,41 @@ __Multi-Signature Waller__ - an additional layer of security is added.
 
 ### Understanding Remix
 
+### Explaining the structure of a solidity contract step-by-step
 
+Shared wallet exercise:
+```solidity
+//contract version
+pragma solidity ^0.4.0;
 
+contract MyContract {
 
+    uint myVariable;
 
+    function MyContract() {
+        myVariable = 5;
+    }
 
+    function setMyVariable(uint myNewVariable) {
+        myVariable = myNewVariable;
+    }   
+
+    function getMyVariable() constant returns(uint){
+        return myVariable;
+    }
+}
+```
+
+__Message object__ is another global variable. It's used whenever contract is sending new transaction:
+  - message sender
+  - message value
+  - message data (has complete call data)
+  - message gas
+
+More info about message objects can be fund on:
+http://solidity.readthedocs.io/en/develop/units-and-global-variables.html
+
+__Suicide function__- the function takes one parameter which is <em>address</em>
 
 ## Additional resouces
 - [Geth Wiki](https://github.com/ethereum/go-ethereum/wiki/geth)
