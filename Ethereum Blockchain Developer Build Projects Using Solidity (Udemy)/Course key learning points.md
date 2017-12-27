@@ -160,6 +160,9 @@ http://solidity.readthedocs.io/en/develop/units-and-global-variables.html
 
 __Suicide function__- the function takes one parameter which is <em>address</em>
 
+
+Extending contract from another contracts
+
 ## Additional resouces
 - [Geth Wiki](https://github.com/ethereum/go-ethereum/wiki/geth)
 - [Geth command line options](https://github.com/ethereum/go-ethereum/wiki/Command-Line-Options)
