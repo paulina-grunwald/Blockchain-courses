@@ -124,32 +124,23 @@ __Multi-Signature Waller__ - an additional layer of security is added.
 
 ### Understanding Remix
 
-### Explaining the structure of a solidity contract step-by-step
+### Explaining the structure of a solidity contract step-by-step (with additional notes from Solidity bible)
+
+The syntax for a contract in Solidity is really similar to a class in oriented object programming languages.
 
 Shared wallet exercise:
-```solidity
-//contract version
-pragma solidity ^0.4.0;
 
-contract MyContract {
+- __pragma__ -  instruction for the compiler how to treat source code.
 
-    uint myVariable;
+- __Uint__ - can think of it as a single slot in a database that can be queried and altered by calling functions of the code that manages the database. In case of Ethereum is always owning contract. Variable of type uint(unsigned integer of 256 bit).
 
-    function MyContract() {
-        myVariable = 5;
-    }
+- __Contract__ in sense of solidity is a collection of code (its <em>functions</em> and data(its <em>state<em>)that resides at specific address of the Ethereum blockchain.
 
-    function setMyVariable(uint myNewVariable) {
-        myVariable = myNewVariable;
-    }   
-
-    function getMyVariable() constant returns(uint){
-        return myVariable;
-    }
-}
-```
-
-__Message object__ is another global variable. It's used whenever contract is sending new transaction:
+- __Get__ and __set__ functions can be used to modify and retrieve the value of the variable.
+- __public__ - makes variables readable from outside.
+- __event__ - allows light clients to react on changes efficiently.
+- __Constructor__ code is run only when the contract is created.
+- __Message object__ is another global variable. It's used whenever contract is sending new transaction:
   - message sender
   - message value
   - message data (has complete call data)
@@ -167,3 +158,4 @@ Extending contract from another contracts
 - [Geth Wiki](https://github.com/ethereum/go-ethereum/wiki/geth)
 - [Geth command line options](https://github.com/ethereum/go-ethereum/wiki/Command-Line-Options)
 - [Solidity](https://solidity.readthedocs.io/en/latest/installing-solidity.html#versioning)
+- http://ethereumdev.io/solidity-hello-world-with-ethereum-wallet/
