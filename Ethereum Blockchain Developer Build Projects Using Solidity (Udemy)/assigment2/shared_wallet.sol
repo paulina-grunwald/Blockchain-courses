@@ -5,7 +5,7 @@ pragma solidity ^0.4.0;
 inheritance, etc.) */
 
 contract MyContract {
-    
+    /*declares variable of type uint(unsigned integer of 256 bits*/
     uint myVariable;
     
     address owner;
@@ -18,14 +18,15 @@ contract MyContract {
 
     	}
     }
-    //add contractor
-    // ether canbe sent
+    //add contractor. it has the same name as the contract
+    // ether can be sent to it
     function MyContract() public payable { 
         myVariable = 5;
     }
     
     //set variable function
-    function setMyVariable(uint myNewVariable) public {myVariable = myNewVariable;
+    function setMyVariable(uint myNewVariable) public {
+        myVariable = myNewVariable;
     }   
     
     //add getter
