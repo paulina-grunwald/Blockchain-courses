@@ -11,6 +11,30 @@ __Merkle tree__, also known as a binary hash tree, is a data structure used for 
 
 __Block__ consists of data and the existing hash. If we change data in the block the hash will be invalid. It also includes Nounce which is input to the hashing algorithm that will result in the first part of hash to be something predefined. It's not possible to predict the Nounce. A Block also contains block number which actually says which block it is in the blockchain. It must also contain timestamp and hash of the previous block.
 
+# Introduction to Ethereum
+
+Transaction will include following informations:
+- recipient,
+- signature,
+- value,
+- gas price,
+- startgas,
+- message.
+
+__The effect of Startgas and Gasprice__
+
+|               | Startgas              | Gasprice                                   |
+| ------------- |:---------------------:| -------------------------------------------|
+| Too low       | Not sent to miners    | No work done by miners                     |
+| Low           | Out-of-gas error      | Mined slower                               |
+| Medium        | IDEAL                 | IDEAL                                      |
+| High          | Delay in getting mined| Mined faster                               |
+| Too hight     | Exceed block gas limit| Not sent to miners if sender is out of fund|
+
+
+# Exercise: Application FoodSafe
+
+
 # Additional References
 - https://en.wikipedia.org/wiki/Singleton_pattern
 - http://searchsqlserver.techtarget.com/definition/hashing
